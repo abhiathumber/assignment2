@@ -1,0 +1,9 @@
+---
+- name: Assignment 2
+  hosts: linux
+  become: true
+  roles:
+    - datadisk
+    - system_profile
+    - users
+    - webserver
