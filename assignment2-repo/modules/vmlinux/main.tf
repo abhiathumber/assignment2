@@ -42,8 +42,7 @@ resource "azurerm_linux_virtual_machine" "vm1" {
   computer_name  = "${var.vmname_l}-cn-${format("%1d", count.index + 1)}"
   size           = var.size
   admin_username = var.adusername
-  # disable_password_authentication = false
-  # admin_password                  = var.adpassword
+  
   admin_ssh_key {
     username   = var.adusername
     public_key = file("~/.ssh/id_rsa.pub")
