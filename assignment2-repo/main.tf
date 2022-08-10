@@ -38,7 +38,7 @@ module "vmlinux" {
 
   size       = "Standard_B1s"
   adusername = "n01512235"
-  adpassword = "<P@$$w0rd>"
+  adpassword = "<test@123>"
 
   storage_account_blob_endpoint = module.common.storage_account_blob_endpoint
 
@@ -53,7 +53,7 @@ module "vmwindows" {
 
   size       = "Standard_B1s"
   adusername = "n01512235"
-  adpassword = "<P@$$w0rd>"
+  adpassword = "<test@123>"
 
   storage_account_blob_endpoint = module.common.storage_account_blob_endpoint
   depends_on                    = [module.network, module.common]
@@ -88,7 +88,7 @@ module "database" {
   tags        = var.common_tags
   server_name = "n01512235-dbserver"
   adusername  = "psqladmin"
-  adpassword  = "H@Sh1CoR3!"
+  adpassword  = "test@123"
   depends_on  = [module.rgroup]
 }
 
